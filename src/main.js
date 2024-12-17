@@ -1,7 +1,7 @@
 const API_KEY = '47606801-75c62912983a7ab29411db2a8';
 const API_URL = 'https://pixabay.com/api/';
 
-let page = 0;
+let page = 1;
 
 const imageContainer = document.getElementById('image_container');
 const loadBtn = document.getElementById('load_more');
@@ -12,6 +12,7 @@ const loadMore = async () => {
     data.hits.forEach(hit => {
         imageContainer.innerHTML += `<div class="image_box"><img src="${hit.imageURL}"></div>`
     });
+    page += 1;
 }
 
 loadBtn.addEventListener('click', loadMore);
