@@ -15,4 +15,3 @@ const loadMore = async () => {
 }
 
 loadBtn.addEventListener('click', loadMore);
-loadMore();
