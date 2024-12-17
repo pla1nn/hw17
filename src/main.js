@@ -10,7 +10,7 @@ const loadMore = async () => {
     const response = await fetch(`${API_URL}?key=${API_KEY}&editors_choice=true&per_page=7&page=${page}`);
     const data = await response.json();
     data.hits.forEach(hit => {
-        imageContainer.innerHTML += `<div class="image_box"><img src="${image.imageURL}"></div>`
+        imageContainer.innerHTML += `<div class="image_box"><img src="${hit.imageURL}"></div>`
     });
 }
 
